@@ -1,36 +1,19 @@
-# Dependencies
-/vendor/
-/node_modules/
+# Fichiers de configuration locaux
+*.local.php
 
-# Environment variables
-.env
-.env.local
-.env.*.local
+# Dossiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
 
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
-.DS_Store
+*.sublime-*
 
-# Logs
-*.log
-logs/
-
-# Cache
-/cache/
-*.cache
-
-# Compiled PHP
-*.php.cache
-
-# OS
-Thumbs.db
-.DS_Store
-
-# Temporary files
-tmp/
-temp/
+# Fichiers temporaires
 *.tmp
+*.swp
+*.bak

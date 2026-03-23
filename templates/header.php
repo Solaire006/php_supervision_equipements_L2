@@ -51,12 +51,12 @@
         <h1>Supervision des Équipements</h1>
         <nav>
             <ul>
-                <li><a href="/public/index.php">Accueil</a></li>
-                <li><a href="/public/equipements/ajouter.php">Ajouter</a></li>
-                <li><a href="/public/equipements/lister.php">Lister</a></li>
-                <li><a href="/public/equipements/supprimer.php">Supprimer</a></li>
-                <li><a href="/public/controle/etat.php">Contrôle SNMP</a></li>
-                <li><a href="/public/scan/prts.php">Scan Ports</a></li>
+                <li><a href="../public/index.php">Accueil</a></li>
+                <li><a href="../public/equipements/ajouter.php">Ajouter</a></li>
+                <li><a href="../public/equipements/lister.php">Lister</a></li>
+                <li><a href="../public/equipements/supprimer.php">Supprimer</a></li>
+                <li><a href="../public/controle/etat.php">Contrôle SNMP</a></li>
+                <li><a href="../public/scan/ports.php">Scan Ports</a></li>
             </ul>
         </nav>
     </header>

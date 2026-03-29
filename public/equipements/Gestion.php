@@ -44,8 +44,8 @@ include __DIR__ . '/../../templates/header.php';
 <div class="container">
     <h2>Gestion des équipements</h2>
 
-<!-- 
-<div id="popup" style="
+
+<!-- <div id="popup" style="
     position: fixed;
     top: 50%;
     left: 50%;
@@ -70,16 +70,8 @@ include __DIR__ . '/../../templates/header.php';
     width: 100%; height: 100%;
     background: rgba(0,0,0,0.5);
     z-index: 998;
-"></div>
+"></div> -->
 
-<script>
-    function closePopup() {
-        document.getElementById('popup').style.display = 'none';
-        document.getElementById('overlay').style.display = 'none';
-    }
-
-    setTimeout(closePopup, 3000); -->
-<!-- </script> -->
 <?php if ($message): ?>
     <p id="message">✅ <?= htmlspecialchars($message) ?></p>
 <?php endif; ?>

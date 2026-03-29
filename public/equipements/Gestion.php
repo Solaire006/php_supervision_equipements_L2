@@ -44,34 +44,6 @@ include __DIR__ . '/../../templates/header.php';
 <div class="container">
     <h2>Gestion des équipements</h2>
 
-
-<!-- <div id="popup" style="
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    border: 2px solid green;
-    padding: 30px;
-    text-align: center;
-    z-index: 999;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    border-radius: 8px;
-">
-    <p style="color: green; font-size: 18px;">
-        ✅ <?= htmlspecialchars($message) ?>
-    </p>
-    <button onclick="closePopup()">OK</button>
-</div>
-
-<div id="overlay" style="
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 998;
-"></div> -->
-
 <?php if ($message): ?>
     <p id="message">✅ <?= htmlspecialchars($message) ?></p>
 <?php endif; ?>
@@ -125,11 +97,7 @@ include __DIR__ . '/../../templates/header.php';
                     <td><?= htmlspecialchars($item['type']) ?></td>
                     <td><?= htmlspecialchars($item['date_ajout']) ?></td>
                     <td>
-                       <form method="GET" action="">
-                            <input type="hidden" name="action" value="supprimer">
-                             <input type="hidden" name="id" value="<?= $item['id'] ?>">
-                             <button type="submit" onclick="return confirm('Supprimer <?= htmlspecialchars($item['nom']) ?> ?')">🗑️</button>
-                        </form>
+                       <button type="button" onclick="ouvrirPopup(<?= $item['id'] ?>)">🗑️</button>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -139,7 +107,17 @@ include __DIR__ . '/../../templates/header.php';
         <form method="GET" action="">
     <button type="submit" name="ajouter" value="1">+ Ajouter un équipement</button>
 </form>
-    <?php endif; ?>
+<div id="popup-supprimer">    <p>Voulez-vous vraiment supprimer cet équipement ?</p>
+    <form method="GET" action="">
+        <input type="hidden" name="action" value="supprimer">
+        <input type="hidden" name="id" id="popup-id" value="">
+        <button type="button" onclick="fermerPopup()">Annuler</button>
+        <button type="submit">Supprimer</button>
+    </form>
 </div>
+
+<div id="overlay-supprimer"></div>
+    <?php endif; ?>
+
 
 <?php include __DIR__ . '/../../templates/footer.php'; ?>

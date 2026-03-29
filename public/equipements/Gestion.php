@@ -44,7 +44,7 @@ include __DIR__ . '/../../templates/header.php';
 <div class="container">
     <h2>Gestion des équipements</h2>
 
-<?php if ($message): ?>
+<!-- 
 <div id="popup" style="
     position: fixed;
     top: 50%;
@@ -78,8 +78,10 @@ include __DIR__ . '/../../templates/header.php';
         document.getElementById('overlay').style.display = 'none';
     }
 
-    setTimeout(closePopup, 3000);
-</script>
+    setTimeout(closePopup, 3000); -->
+<!-- </script> -->
+<?php if ($message): ?>
+    <p id="message">✅ <?= htmlspecialchars($message) ?></p>
 <?php endif; ?>
 
     <?php if ($erreur): ?>

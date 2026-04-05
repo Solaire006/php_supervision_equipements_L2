@@ -33,3 +33,168 @@
     background: rgba(0,0,0,0.5);
     z-index: 998;
 }
+
+/* General */
+body {
+    background: white;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #222;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background: #f5f5f5;
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background: #fafafa;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button[name="ajouter"] {
+    background: #333333;
+    color: white;
+}
+
+button[name="ajouter"]:hover {
+    background: #555;
+}
+
+/* Delete button */
+button[type="button"][onclick*="ouvrirPopup"] {
+    background: #e53935;
+    color: white;
+    padding: 6px 12px;
+}
+
+button[type="button"][onclick*="ouvrirPopup"]:hover {
+    background: #c62828;
+}
+
+/* Annuler button */
+button[type="button"][onclick*="Gestion"] {
+    background: #e53935;
+    color: white;
+    margin-left: 8px;
+}
+button[type="button"][onclick*="Gestion"]:hover {
+    background: #c62828;
+}
+
+button[name="ajouter"][type="submit"] {
+    background: #2e7d32;
+    color: white;
+}
+
+button[name="ajouter"][type="submit"]:hover {
+    background: #1b5e20;
+}
+/* Form */
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #333;
+}
+
+/* Popup buttons */
+#popup-supprimer p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#popup-supprimer button[type="button"] {
+    background: #aaa;
+    color: white;
+    margin-right: 10px;
+}
+
+#popup-supprimer button[type="submit"] {
+    background: #e53935;
+    color: white;
+}
+
+#popup-supprimer button[type="submit"]:hover {
+    background: #c62828;
+}
+
+/* Error */
+.alert.error {
+    background: #fdecea;
+    color: #c62828;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+#ip-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#ip-container input {
+    width: 70px;
+    text-align: center;
+}
+
+#ip-container span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}

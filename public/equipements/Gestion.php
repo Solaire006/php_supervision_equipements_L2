@@ -64,7 +64,16 @@ include __DIR__ . '/../../templates/header.php';
             <input type="text" name="nom" placeholder="Ex: Switch-Salle-A" required>
 
             <label>Adresse IP</label>
-            <input type="text" name="adresse_ip" placeholder="Ex: 192.168.1.1" required>
+            <div id="ip-container">
+                <input type="number" id="ip1" min="0" max="255" placeholder="192" required>
+                 <span>.</span>
+                <input type="number" id="ip2" min="0" max="255" placeholder="168" required>
+                <span>.</span>
+                <input type="number" id="ip3" min="0" max="255" placeholder="1" required>
+                <span>.</span>
+                <input type="number" id="ip4" min="0" max="255" placeholder="1" required>
+                <input type="hidden" name="adresse_ip" id="adresse_ip">
+</div>
 
             <label>Type</label>
             <select name="type" required>

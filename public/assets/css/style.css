@@ -111,11 +111,22 @@ button[type="button"][onclick*="ouvrirPopup"]:hover {
 
 /* Annuler button */
 button[type="button"][onclick*="Gestion"] {
-    background: #aaa;
+    background: #e53935;
     color: white;
     margin-left: 8px;
 }
+button[type="button"][onclick*="Gestion"]:hover {
+    background: #c62828;
+}
 
+button[name="ajouter"][type="submit"] {
+    background: #2e7d32;
+    color: white;
+}
+
+button[name="ajouter"][type="submit"]:hover {
+    background: #1b5e20;
+}
 /* Form */
 form label {
     display: block;

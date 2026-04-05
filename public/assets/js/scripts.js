@@ -1,7 +1,7 @@
 setTimeout(function() {
     var msg = document.getElementById('message');
     if (msg) msg.style.display = 'none';
-}, 4000);
+}, 3000);
 
 function ouvrirPopup(id) {
     document.getElementById('popup-id').value = id;

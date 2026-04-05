@@ -45,7 +45,7 @@ include __DIR__ . '/../../templates/header.php';
     <h2>Gestion des équipements</h2>
 
 <?php if ($message): ?>
-    <p id="message">✅ <?= htmlspecialchars($message) ?></p>
+    <p id="message"><?= htmlspecialchars($message) ?></p>
 <?php endif; ?>
 
     <?php if ($erreur): ?>

@@ -1,5 +1,5 @@
 -- script pour créer les tables de la base de données
-CREATE TABLE IF NOT EXISTS supervision_db;
+CREATE DATABASE IF NOT EXISTS supervision_db;
 USE supervision_db;
 
 CREATE TABLE IF NOT EXISTS equipements (

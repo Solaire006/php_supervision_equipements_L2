@@ -11,7 +11,7 @@ class snmpChecker {
         $this->ip = $ip;
         require_once __DIR__ . '/../config/snmp_config.php';
         $this->community = defined('SNMP_COMMUNITY') ? SNMP_COMMUNITY : 'public';
-        $this->timeout = defined('SNMP_TIMOUT') ? SNMP_TIMOUT : 1000000;
+        $this->timeout = defined('SNMP_TIMEOUT') ? SNMP_TIMEOUT : 1000000;
         $this->retries = defined('SNMP_RETRIES') ? SNMP_RETRIES : 1;
     }
 
@@ -27,7 +27,7 @@ class snmpChecker {
     }
     
     //fonction pour récup le nom du système
-    public function getSysname() {
+    public function getSysName() {
         $oid = '1.3.6.1.2.1.1.5.0';
         $result = @snmp2_get($this->ip, $this->community, $oid, $this->timeout, $this->retries);
         return ($result !== false) ? $result : null;
@@ -36,7 +36,7 @@ class snmpChecker {
     //fonction pour rérup description système; va retourner la déscription 
     public function getSysDescr() {
         $oid = '.1.3.6.1.2.1.1.1.0';
-        $result = @snmp2_get($this->ip, $this->community, $oid, $this->timout, $this->retries);
+        $result = @snmp2_get($this->ip, $this->community, $oid, $this->timeout, $this->retries);
         return ($result !== false) ? $result : null; 
     }
 }
